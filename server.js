@@ -20,7 +20,7 @@ app.use(express.json());
 app.use((req, res, next) => {
     res.append('Access-Control-Allow-Origin', process.env.DOMAIN);
     res.append('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
-    res.append('Access-Control-Allow-Headers', '*');
+    res.append('Access-Control-Allow-Headers', 'Content-Type');
     res.header("Access-Control-Allow-Credentials", "true");
     next();
 });
